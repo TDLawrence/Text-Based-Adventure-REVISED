@@ -1,39 +1,41 @@
 import java.util.Scanner;
+import java.util.Random;
 public class Runner {
 private static boolean gameOn = true;
 	
 	public static void main(String[] args)
-	{
-		Room[][] building = new Room[5][5];
+	{   //Generate random 2D array of rooms
 		
-		//Fill the building with normal rooms
-		for (int x = 0; x<building.length; x++)
-		{
-			for (int y = 0; y < building[x].length; y++)
-			{
-				building[x][y] = new Room(x,y);
-			}
-		}
+		Random a=new Random();
+	    int h=a.nextInt(5);
+	    int i=a.nextInt(5);
+	    Room[][] rooms=new Room[h][i];
+	    
+		Board board=new Board(rooms);
+		
+		//Generate Random Board
+		 board.printBoard();
+		
 		
 		//Create a random winning room.
-		int x = (int)(Math.random()*building.length);
-		int y = (int)(Math.random()*building.length);
-		building[x][y] = new WinningRoom(x, y);
+		int x = (int)(Math.random()*rooms.length);
+		int y = (int)(Math.random()*rooms[x].length);
+		rooms[x][y] = new WinningRoom(x, y);
 		
 		//Create a random party room
-		int j = (int)(Math.random()*building.length);
-		int k = (int)(Math.random()*building.length);
-		building[j][k] = new partyRoom(j, k);
+		int j = (int)(Math.random()*rooms.length);
+		int k = (int)(Math.random()*rooms[x].length);
+		rooms[j][k] = new partyRoom(j, k);
 		 
 		 //Setup player 1 and the input scanner
 		Person player1 = new Person("FirstName", "FamilyName", 0,0);
-		building[0][0].enterRoom(player1);
+		rooms[0][0].enterRoom(player1);
 		Scanner in = new Scanner(System.in);
 		while(gameOn)
 		{
 			System.out.println("Where would you like to move? (Choose N, S, E, W)");
 			String move = in.nextLine();
-			if(validMove(move, player1, building))
+			if(validMove(move, player1, rooms))
 			{
 				System.out.println("Your coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc());
 				
@@ -47,15 +49,15 @@ private static boolean gameOn = true;
 		in.close();
 	}
 	
-	public static boolean validMove(String move, Person p, Room[][] map)
+	public static boolean validMove(String move, Person p, Room[][] rooms)
 	{
 		move = move.toLowerCase().trim();
 		switch (move) {
 			case "n":
 				if (p.getxLoc() > 0)
 				{
-					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
-					map[p.getxLoc()-1][p.getyLoc()].enterRoom(p);
+					rooms[p.getxLoc()][p.getyLoc()].leaveRoom(p);
+					rooms[p.getxLoc()-1][p.getyLoc()].enterRoom(p);
 					return true;
 				}
 				else
@@ -63,10 +65,10 @@ private static boolean gameOn = true;
 					return false;
 				}
 			case "e":
-				if (p.getyLoc()< map[p.getyLoc()].length -1)
+				if (p.getyLoc()< rooms[p.getyLoc()].length -1)
 				{
-					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
-					map[p.getxLoc()][p.getyLoc() + 1].enterRoom(p);
+					rooms[p.getxLoc()][p.getyLoc()].leaveRoom(p);
+				    rooms[p.getxLoc()][p.getyLoc() + 1].enterRoom(p);
 					return true;
 				}
 				else
@@ -75,10 +77,10 @@ private static boolean gameOn = true;
 				}
 
 			case "s":
-				if (p.getxLoc() < map.length - 1)
+				if (p.getxLoc() < rooms.length - 1)
 				{
-					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
-					map[p.getxLoc()+1][p.getyLoc()].enterRoom(p);
+					rooms[p.getxLoc()][p.getyLoc()].leaveRoom(p);
+					rooms[p.getxLoc()+1][p.getyLoc()].enterRoom(p);
 					return true;
 				}
 				else
@@ -89,8 +91,8 @@ private static boolean gameOn = true;
 			case "w":
 				if (p.getyLoc() > 0)
 				{
-					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
-					map[p.getxLoc()][p.getyLoc()-1].enterRoom(p);
+					rooms[p.getxLoc()][p.getyLoc()].leaveRoom(p);
+					rooms[p.getxLoc()][p.getyLoc()-1].enterRoom(p);
 					return true;
 				}
 				else
