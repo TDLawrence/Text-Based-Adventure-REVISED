@@ -5,22 +5,25 @@ private static boolean gameOn = true;
 	
 	public static void main(String[] args)
 	{   //Generate random 2D array of rooms
-		
 		Random a=new Random();
-	    int h=a.nextInt(5);
-	    int i=a.nextInt(5);
+	    int h=a.nextInt(10)+1;
+	    int i=a.nextInt(10)+1;
 	    Room[][] rooms=new Room[h][i];
 	    
 		Board board=new Board(rooms);
-		
-		//Generate Random Board
+		//Generate Random Board and prints the board.
 		 board.printBoard();
 		
-		
+		 //Fills in Rooms
+		for(int n=0;n<rooms.length;n++)
+		{for(int g=0;g<rooms[n].length;g++)
+		 {rooms[n][g]=new Room(n,g);	
+		 }	
+		}
 		//Create a random winning room.
 		int x = (int)(Math.random()*rooms.length);
 		int y = (int)(Math.random()*rooms[x].length);
-		rooms[x][y] = new WinningRoom(x, y);
+		 rooms[x][y] = new WinningRoom(x, y);
 		
 		//Create a random party room
 		int j = (int)(Math.random()*rooms.length);

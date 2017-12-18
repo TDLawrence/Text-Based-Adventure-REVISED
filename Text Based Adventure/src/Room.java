@@ -15,7 +15,10 @@ public class Room {
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
 	}
-	
+	public void meetRuler(Person x,Ruler y)
+	{
+		System.out.print("Hi, "+x.firstName+", I am"+y.getTitle()+ y.familyName);
+	}
 	public void leaveRoom(Person x)
 	{
 		occupant = null;
