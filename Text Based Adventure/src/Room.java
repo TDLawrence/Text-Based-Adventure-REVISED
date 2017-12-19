@@ -1,4 +1,4 @@
-
+import java.util.Random;
 public class Room {
 	Person occupant;
 	int xLoc,yLoc;
@@ -19,6 +19,8 @@ public class Room {
 	{
 		System.out.print("Hi, "+x.firstName+", I am"+y.getTitle()+ y.familyName);
 	}
+	
+	
 	public void leaveRoom(Person x)
 	{
 		occupant = null;
