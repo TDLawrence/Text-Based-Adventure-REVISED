@@ -2,6 +2,8 @@ import java.util.Random;
 public class Room {
 	Person occupant;
 	int xLoc,yLoc;
+	Riddle riddle;
+	Ruler
 	
 	public Room(int x, int y)
 	{
