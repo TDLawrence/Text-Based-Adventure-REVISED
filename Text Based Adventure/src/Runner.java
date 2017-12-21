@@ -9,10 +9,7 @@ private static boolean gameOn = true;
 	    int h=a.nextInt(10)+1;
 	    int i=a.nextInt(10)+1;
 	    Room[][] rooms=new Room[h][i];
-	    
-		Board board=new Board(rooms);
-		//Generate Random Board and prints the board.
-		 board.printBoard();
+	 
 		
 		 //Fills in Rooms
 		for(int n=0;n<rooms.length;n++)
@@ -29,6 +26,10 @@ private static boolean gameOn = true;
 		int j = (int)(Math.random()*rooms.length);
 		int k = (int)(Math.random()*rooms[x].length);
 		rooms[j][k] = new partyRoom(j, k);
+		
+		Board board=new Board(rooms);
+		//Generate Random Board and prints the board.
+		 board.printBoard();
 		 
 		 //Setup player 1 and the input scanner
 		Person player1 = new Person("FirstName", "FamilyName", 0,0);
@@ -68,7 +69,7 @@ private static boolean gameOn = true;
 					return false;
 				}
 			case "e":
-				if (p.getyLoc()< rooms[p.getyLoc()].length -1)
+				if (p.getyLoc()< rooms[p.getxLoc()].length -1)
 				{
 					rooms[p.getxLoc()][p.getyLoc()].leaveRoom(p);
 				    rooms[p.getxLoc()][p.getyLoc() + 1].enterRoom(p);

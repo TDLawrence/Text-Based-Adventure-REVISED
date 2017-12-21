@@ -1,14 +1,20 @@
-import java.util.Random;
+
 public class Room {
 	Person occupant;
 	int xLoc,yLoc;
 	Riddle riddle;
-	Ruler
+	Ruler ruler;
 	
 	public Room(int x, int y)
 	{
-		xLoc = x;
-		yLoc = y;
+		this.xLoc = x;
+		this.yLoc = y;
+		this.ruler=ruler;
+	}
+	public void printRoom()
+	{Room x=new Room();
+	 System.out.print(x);
+		
 	}
 	public void enterRoom(Person x)
 	{
@@ -17,11 +23,21 @@ public class Room {
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
 	}
-	public void meetRuler(Person x,Ruler y)
+	public void meetRuler(Person x,Ruler ruler)
 	{
-		System.out.print("Hi, "+x.firstName+", I am"+y.getTitle()+ y.familyName);
+		System.out.print("Hi, "+x.firstName+", I am"+ruler.getTitle()+ ruler.familyName);
 	}
-	
+	public void Riddles()
+	{   Riddle x=new Riddle();
+		x.getRiddles();
+		x.getQuestion(x.getRiddles());
+		if (x.isCorrect())
+		{Room.leaveRoom(this.occupant)
+			
+		}
+	 
+		
+	  }
 	
 	public void leaveRoom(Person x)
 	{

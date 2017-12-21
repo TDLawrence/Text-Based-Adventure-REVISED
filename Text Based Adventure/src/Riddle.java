@@ -49,7 +49,7 @@ public class Riddle {
 	 if(riddleNumber==1)
 	    {answer="Humans";}
      if(riddleNumber==2)
-        {answer=96;}
+        {answer="96";}
      if(riddleNumber==3)
         {answer="The horse's name was Friday";}
      if(riddleNumber==4)
@@ -61,23 +61,23 @@ public class Riddle {
       if(riddleNumber==7)
         {answer="David";}
       if(riddleNumber==8)
-        {question="A fireman has two sons, Jose and who else";}
+        {answer="Hose B";}
       if(riddleNumber==9)
-        {question="Knock knock! This group has been know by this name since 1931";}
+        {answer="Jehovah's Witnesses";}
       if(riddleNumber==10)
-        {question="This country measures its economy on gross national HAPPINESS.";}
+        {answer="Bhutan";}
       if (riddleNumber==11)
-        {question="I never sing, but you love my melodious voice. What am I?";}
-      return question;
+        {answer="Hummingbird";}
+      return answer;
 		 
 	 }
 	public boolean isCorrect()
 	{Riddle riddles=new Riddle();
 	 Scanner answer=new Scanner(System.in);
-	 riddles.printRiddle();
-	
-		
-	}
-		
+	 if (answer.nextLine()==riddles.getAnswer(riddles.getRiddles()))
+	 {return true;	 
+	 }
+	 return false;	
+	}		
 	}
 
