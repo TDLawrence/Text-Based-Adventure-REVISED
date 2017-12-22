@@ -21,6 +21,25 @@ private static boolean gameOn = true;
 		int x = (int)(Math.random()*rooms.length);
 		int y = (int)(Math.random()*rooms[x].length);
 		 rooms[x][y] = new WinningRoom(x, y);
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 /*Cryoxide rooom?
+		 int c = (int)(Math.random()*rooms.length);
+			int d = (int)(Math.random()*rooms[x].length);
+			 rooms[c][d] = new Cryoxide(x, y); 
+		 
+		*/ 
+			 
+			 
+			 
+			 
+			 
 		
 		//Create a random party room
 		int j = (int)(Math.random()*rooms.length);
