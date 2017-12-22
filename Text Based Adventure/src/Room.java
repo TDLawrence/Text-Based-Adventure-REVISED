@@ -11,11 +11,13 @@ public class Room {
 		this.yLoc = y;
 		this.ruler=ruler;
 	}
+	
 	public void printRoom()
 	{Room x=new Room();
 	 System.out.print(x);
 		
 	}
+	
 	public void enterRoom(Person x)
 	{
 		System.out.println("You enter a plain old room");
@@ -23,10 +25,12 @@ public class Room {
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
 	}
+	
 	public void meetRuler(Person x,Ruler ruler)
 	{
 		System.out.print("Hi, "+x.firstName+", I am"+ruler.getTitle()+ ruler.familyName);
 	}
+	
 	public void Riddles()
 	{   Riddle x=new Riddle();
 		x.getRiddles();
