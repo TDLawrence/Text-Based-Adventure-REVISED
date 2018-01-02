@@ -12,9 +12,10 @@ public class Room {
 		this.ruler=ruler;
 	}
 	
-	public void printRoom()
-	{Room x=new Room();
-	 System.out.print(x);
+	public String toString()
+	{
+	
+	 return "[ ]";
 		
 	}
 	
