@@ -17,7 +17,7 @@ private static boolean gameOn = true;
 		 {rooms[n][g]=new Room(n,g);	
 		 }	
 		}
-		//Create a random winning room.
+		//Create a random winning  room.
 		int x = (int)(Math.random()*rooms.length);
 		int y = (int)(Math.random()*rooms[x].length);
 		 rooms[x][y] = new WinningRoom(x, y);
