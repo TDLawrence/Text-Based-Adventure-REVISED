@@ -51,8 +51,8 @@ private static boolean gameOn = true;
 		 board.printBoard();
 		 
 		 //Setup player 1 and the input scanner
-		Person player1 = new Person("FirstName", "FamilyName", 0,0);
-		rooms[0][0].enterRoom(player1);
+		Person player1 = new Person("FirstName", "FamilyName", m,o);
+		rooms[m][o].enterRoom(player1);
 		Scanner in = new Scanner(System.in);
 		while(gameOn)
 		{
