@@ -41,7 +41,7 @@ private static boolean gameOn = true;
 			 
 			 
 		
-		//Create a random party room
+		//Create a random  party room
 		int j = (int)(Math.random()*rooms.length);
 		int k = (int)(Math.random()*rooms[x].length);
 		rooms[j][k] = new partyRoom(j, k);
