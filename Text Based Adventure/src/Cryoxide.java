@@ -1,7 +1,8 @@
 
 public class Cryoxide extends Room {
 	int cryoxide = 0;
-	public CryoxideRoom (int c, int d) {
+	public CryoxideRoom (int c, int d)
+	{
 		super(c, d);
 		
 	}

@@ -22,14 +22,14 @@ private static boolean gameOn = true;
 		int y = (int)(Math.random()*rooms[x].length);
 		 rooms[x][y] = new WinningRoom(x, y);
 		 
+		//Create a Control Central room/
+		 int m = (int)(Math.random()*rooms.length);
+		 int o = (int)(Math.random()*rooms[x].length);
+		 rooms[m][o] = new ControlCentralI(x, y);
 		 
 		 
 		 
-		 
-		 
-		 
-		 
-		 /*Cryoxide rooom?
+		 /*Cryoxide room?
 		 int c = (int)(Math.random()*rooms.length);
 			int d = (int)(Math.random()*rooms[x].length);
 			 rooms[c][d] = new Cryoxide(x, y); 

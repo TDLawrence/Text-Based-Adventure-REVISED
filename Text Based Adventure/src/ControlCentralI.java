@@ -11,8 +11,9 @@ public class ControlCentralI extends Room
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
-		System.out.println("Thank you for coming Cybersquad, we need your help! Hacker has interfered with Motherboard's central cooling systen. "
-				+ "Your mission is to obtain the special coolant from CastleBlanka known as Cyroxide. You will also need to find out the exact volume of the coolant needed.");
+		System.out.println("Thank you for jacking in, Cybersquad, we need your help! Hacker has interfered with Motherboard's central cooling systen. "
+				+ "Your mission is to obtain the special coolant from Castle Blanka known as Cyroxide. You will also need to find out the exact volume of the coolant needed."
+				+ "Go from room to room in Castle Blanka and solve the standard weights and measures problems in order to obtain the closely guarded Cryoxide. ");
 		Runner.gameOff();
 	}
 		
@@ -21,5 +22,9 @@ public class ControlCentralI extends Room
 		return "[CC]";
 	}
 	
+	public static gameOff()
+	{
+		return gameOn=false;
+	}
 }
 
