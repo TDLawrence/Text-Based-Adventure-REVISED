@@ -29,12 +29,10 @@ private static boolean gameOn = true;
 		 
 		 
 		 
-		 /*Cryoxide room?
+		 //Cryoxide room?
 		 int c = (int)(Math.random()*rooms.length);
-			int d = (int)(Math.random()*rooms[x].length);
-			 rooms[c][d] = new Cryoxide(x, y); 
-		 
-		*/ 
+		 int d = (int)(Math.random()*rooms[x].length);
+		 rooms[c][d] = new CryoxideRoom(c, d); 
 			 
 			 
 			 
