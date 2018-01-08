@@ -25,7 +25,7 @@ private static boolean gameOn = true;
 		//Create a Control Central room/
 		 int m = (int)(Math.random()*rooms.length);
 		 int o = (int)(Math.random()*rooms[x].length);
-		 rooms[m][o] = new ControlCentralI(x, y);
+		 rooms[m][o] = new ControlCentralI(m, o);
 		 
 		 
 		 

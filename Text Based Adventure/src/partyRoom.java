@@ -1,4 +1,4 @@
-
+ 
 public class partyRoom extends Room {
 	public partyRoom(int x, int y)
 	{
