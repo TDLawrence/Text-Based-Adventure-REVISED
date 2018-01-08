@@ -10,7 +10,8 @@ public class CryoxideRoom extends Room{
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
-		System.out.println("You found some hidden Cryoxide"); //change
+		Room.cryoxide++;
+		System.out.println("You found some hidden Cryoxide! You now have " + Room.cryoxide + " cryoxide."); //change
 		
 	}
 	public void leaveRoom(Person x)
@@ -18,9 +19,5 @@ public class CryoxideRoom extends Room{
 		occupant=null;
 	}
 	
-	public String toString()
-	{
-		return "[ ]";
-	}
 
 }

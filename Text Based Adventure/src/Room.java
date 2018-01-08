@@ -5,6 +5,8 @@ public class Room {
 	Riddle riddle;
 	Ruler ruler;
 	
+	public static int cryoxide;
+	
 	public Room(int x, int y)
 	{
 		this.xLoc = x;
@@ -15,7 +17,7 @@ public class Room {
 	public String toString()
 	{
 	
-	 return "[ ]";
+	 return "[  ]";
 		
 	}
 	

@@ -10,13 +10,21 @@ public class WinningRoom extends Room{
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
-		System.out.println("You found the winning room! Ten points for Gryffindor.");
-		Runner.gameOff();
-	}
 		
+		
+		if(Room.cryoxide >= 10) {
+			Runner.gameOff();
+			System.out.println("You found enough cryoxide!");
+		}
+		System.out.println("You need to collect more cryoxide! You have " + Room.cryoxide + ".");
+	}
+		public void leaveRoom(Person x)
+		{
+			occupant=null;
+		}
 	public String toString()
 	{
-		return "[w]";
+		return "[ww]";
 	}
 	
 }
