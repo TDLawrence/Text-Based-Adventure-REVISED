@@ -29,7 +29,7 @@ private static boolean gameOn = true;
 		 
 		 
 		 
-		 //Cryoxide room?
+		 //Cryoxide room
 		 int c = (int)(Math.random()*rooms.length);
 		 int d = (int)(Math.random()*rooms[x].length);
 		 rooms[c][d] = new CryoxideRoom(c, d); 
@@ -59,7 +59,7 @@ private static boolean gameOn = true;
 			if(validMove(move, player1, rooms))
 			{
 				System.out.println("Your coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc());
-				
+				System.out.println("You have " + Room.cryoxide + " cryoxide.");
 			}
 			else {
 				System.out.println("Please choose a valid move.");
