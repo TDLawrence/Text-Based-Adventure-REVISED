@@ -13,7 +13,7 @@ public class ControlCentralI extends Room
 		x.setyLoc(this.yLoc);
 		System.out.println("Thank you for jacking in, Cybersquad, we need your help! Hacker has interfered with Motherboard's central cooling systen.");
 		System.out.println();
-		System.out.println("Your mission is to obtain the special coolant from Castle Blanka known as Cyroxide. You will also need to find out the exact volume of the coolant needed.");
+		System.out.println("Your mission is to obtain the special coolant from Castle Blanka known as Cyroxide."); //You will also need to find out the exact volume of the coolant needed."); **add
 		System.out.println("Go from room to room in Castle Blanka and solve the standard weights and measures problems in order to obtain the closely guarded Cryoxide.");
 		System.out.println();
 	}
@@ -22,7 +22,5 @@ public class ControlCentralI extends Room
 	{
 		return "[CC]";
 	}
-	
-	
 }
 

@@ -5,7 +5,7 @@ public class Room {
 	Riddle riddle;
 	Ruler ruler;
 	
-	public static int cryoxide;
+	public static int cryoxide;			//Room.cryoxide++ wherever to add
 	
 	public Room(int x, int y)
 	{
